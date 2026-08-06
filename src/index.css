@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* MartQi Brand Tokens */
+@theme {
+  --color-navy-950: #0a1628;
+  --color-navy-900: #0f1f3a;
+  --color-navy-800: #1a3056;
+  --color-navy-700: #234272;
+  --color-navy-600: #2d558f;
+  --color-navy-500: #3667ab;
+  --color-navy-400: #5a85c2;
+  --color-sand-50: #fdfbf7;
+  --color-sand-100: #faf5eb;
+  --color-sand-200: #f0e4cc;
+  --color-sand-300: #e0ca99;
+  --color-sand-400: #d0b066;
+  --color-sand-500: #c09840;
+  --color-sand-600: #a07d2e;
+  --color-light-blue-50: #f0f6fb;
+  --color-light-blue-100: #dce8f4;
+  --color-light-blue-200: #b8d1e9;
+  --color-light-blue-300: #94bade;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
