@@ -1,9 +1,11 @@
 import SectionHeader from '../components/SectionHeader';
 import company from '../data/company';
+import Seo from '../components/Seo';
 
 export default function Certifications() {
   return (
     <div className="py-16 lg:py-24">
+      <Seo path="/certifications" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           title="Certifications & Compliance"

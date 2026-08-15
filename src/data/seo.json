@@ -1,0 +1,46 @@
+{
+  "/": {
+    "title": "MARTQI LLP — From Indian Farms to Global Markets",
+    "description": "MartQi LLP exports premium Basmati and Non-Basmati Rice, Fox Nut (Makhana), and Flax Seed from India to global markets."
+  },
+  "/about": {
+    "title": "About Us — MARTQI LLP",
+    "description": "MartQi LLP is an India-based export company, registered as a Limited Liability Partnership, sourcing Basmati Rice, Non-Basmati Rice, Fox Nut, and Flax Seed."
+  },
+  "/contact": {
+    "title": "Contact Us — MARTQI LLP",
+    "description": "Contact MartQi LLP for export inquiries, quotes, or general questions. Email info@martqi.com or message us on WhatsApp."
+  },
+  "/export": {
+    "title": "Export Products — MARTQI LLP",
+    "description": "Browse MartQi LLP's export catalog: Basmati Rice, Non-Basmati Rice, Fox Nut (Makhana), and Flax Seed, sourced from India."
+  },
+  "/export/agri-commodities": {
+    "title": "Agri Commodities — MARTQI LLP",
+    "description": "MartQi LLP's agri commodities for export: Basmati Rice, Non-Basmati Rice, Fox Nut (Makhana), and Flax Seed."
+  },
+  "/export/basmati-rice": {
+    "title": "Basmati Rice — 1509 & 1121 — MARTQI LLP",
+    "description": "MartQi exports premium Basmati rice in two varieties — 1121 (extra-long grain) and 1509 (early-maturing). Request a quote."
+  },
+  "/export/non-basmati-rice": {
+    "title": "Non-Basmati Rice — Matta Rice — MARTQI LLP",
+    "description": "MartQi exports Kerala Matta Rice, a coarse, parboiled red rice with GI recognition, grown in Kerala and Karnataka, India."
+  },
+  "/export/fox-nut": {
+    "title": "Fox Nut (Makhana) — MARTQI LLP",
+    "description": "MartQi exports Makhana (Fox Nut), the puffed seed of the prickly water lily, traditionally cultivated in Bihar, India."
+  },
+  "/export/flax-seed": {
+    "title": "Flax Seed — MARTQI LLP",
+    "description": "MartQi exports Flax Seed (Linum usitatissimum) in brown and golden varieties, for food, nutraceutical, and oil use."
+  },
+  "/certifications": {
+    "title": "Certifications & Quality — MARTQI LLP",
+    "description": "MartQi LLP's registrations: IEC ABZFM2033K, GST in Delhi and Telangana, and APEDA RCMC registration in progress."
+  },
+  "/blog": {
+    "title": "Blog & News — MARTQI LLP",
+    "description": "Updates and insights from MartQi LLP, an Indian export company."
+  }
+}

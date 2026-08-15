@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import products from '../data/products';
+import Seo from '../components/Seo';
 
 export default function ProductDetail() {
   const { slug } = useParams();
@@ -18,6 +19,7 @@ export default function ProductDetail() {
 
   return (
     <div className="py-12 lg:py-16">
+      <Seo path={`/export/${slug}`} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <nav className="text-sm text-gray-500 mb-8" aria-label="Breadcrumb">

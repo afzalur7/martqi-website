@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom';
 import SectionHeader from '../components/SectionHeader';
 import ProductCard from '../components/ProductCard';
+import Seo from '../components/Seo';
 import products from '../data/products';
 import company from '../data/company';
 
 export default function Home() {
   return (
     <>
+      <Seo path="/" />
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="relative bg-navy-800 text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-navy-800 via-navy-700 to-navy-900 opacity-90" />

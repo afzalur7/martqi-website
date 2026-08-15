@@ -1,8 +1,10 @@
 import SectionHeader from '../components/SectionHeader';
+import Seo from '../components/Seo';
 
 export default function Blog() {
   return (
     <div className="py-16 lg:py-24">
+      <Seo path="/blog" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           title="Blog & News"

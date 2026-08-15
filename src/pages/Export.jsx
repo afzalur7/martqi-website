@@ -1,11 +1,13 @@
 import SectionHeader from '../components/SectionHeader';
 import ProductCard from '../components/ProductCard';
+import Seo from '../components/Seo';
 import categories from '../data/categories';
 import products from '../data/products';
 
 export default function Export() {
   return (
     <div className="py-16 lg:py-24">
+      <Seo path="/export" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero section */}
         <SectionHeader

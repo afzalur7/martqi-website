@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
 import company from '../data/company';
+import Seo from '../components/Seo';
 
 export default function About() {
   return (
     <>
+      <Seo path="/about" />
       {/* ── 1. Hero ──────────────────────────────────────── */}
       <section className="relative bg-navy-800 text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-navy-800 via-navy-700 to-navy-900 opacity-90" />

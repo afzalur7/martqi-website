@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import company from '../data/company';
 import products from '../data/products';
+import Seo from '../components/Seo';
 
 // WhatsApp link is derived from the mobile number in the company data file,
 // so changing the number there is a one-place edit.
@@ -33,6 +34,7 @@ export default function Contact() {
 
   return (
     <>
+      <Seo path="/contact" />
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="relative bg-navy-800 text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-navy-800 via-navy-700 to-navy-900 opacity-90" />
