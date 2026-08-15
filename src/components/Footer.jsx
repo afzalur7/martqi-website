@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import company from '../data/company';
 import navigation from '../data/navigation';
+import imageCredits from '../data/imageCredits';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -82,6 +83,38 @@ export default function Footer() {
           <p className="text-xs text-gray-600">
             IEC: {company.iec.code} | GST: Delhi &amp; Telangana
           </p>
+        </div>
+
+        {/* Image credits */}
+        <div className="mt-6 pt-6 border-t border-navy-800">
+          <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+            Image Credits
+          </h3>
+          <ul className="mt-2 space-y-1">
+            {imageCredits.map((credit) => (
+              <li key={credit.title} className="text-xs text-gray-500">
+                &ldquo;{credit.title}&rdquo; by{' '}
+                <a
+                  href={credit.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors underline"
+                >
+                  {credit.author}
+                </a>
+                {' — '}
+                <a
+                  href={credit.licenseUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors underline"
+                >
+                  {credit.license}
+                </a>
+                , via Wikimedia Commons
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </footer>
