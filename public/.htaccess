@@ -1,13 +1,24 @@
-# SPA routing fallback — send all requests to index.html
-# so React Router can handle client-side routes.
-# DirectoryIndex lets per-route static shells (dist/<route>/index.html)
-# serve their unique <title>/meta on exact-path requests.
+# SPA routing + per-route static HTML shells.
+#
+# Each route has a static shell at dist/<route>/index.html carrying that
+# page's unique <title>/<meta description>. We serve it directly (no
+# trailing-slash 301) and fall back to index.html for anything else, so
+# React Router can handle client-side navigation.
+
 DirectoryIndex index.html
+DirectorySlash Off
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-  RewriteRule ^index\.html$ - [L]
+
+  # Serve a route's static shell directly when its directory contains an
+  # index.html — avoids mod_dir's trailing-slash redirect.
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.+[^/])$ /$1/index.html [L]
+
+  # SPA fallback — send any non-file, non-directory request to index.html.
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
