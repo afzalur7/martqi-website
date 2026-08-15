@@ -21,6 +21,13 @@ const company = {
   },
   yearEstablished: '[YEAR ESTABLISHED]',
   clientCount: '[CLIENT COUNT]',
+  contact: {
+    principalPlaceOfBusiness:
+      'Floor No. 1, Flat No. 10-900011, Adarsh Nagar, Pothireddy Palli X Road, Lane Beside TVS Showroom, Chow Rasta, Sangareddy, Telangana 502295, India',
+    email: 'info@martqi.com',
+    mobile: '+91 97175 50353',
+    llpin: 'ACE-4894',
+  },
 };
 
 export default company;
