@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import company from '../data/company';
 import products from '../data/products';
 import Seo from '../components/Seo';
@@ -6,6 +6,19 @@ import Seo from '../components/Seo';
 // WhatsApp link is derived from the mobile number in the company data file,
 // so changing the number there is a one-place edit.
 const whatsappLink = `https://wa.me/${company.contact.mobile.replace(/\D/g, '')}`;
+
+// Google Forms submission — hidden iframe POST avoids CORS, no backend needed.
+// (Same mechanism as the horizons-export InquiryModal — technical pattern only.)
+const GOOGLE_FORM_URL =
+  'https://docs.google.com/forms/u/0/d/e/1FAIpQLSeGslDn0hLoMKo9va3qd9iKiDbTS7KVVvHQgDks7qf9e6Pifg/formResponse';
+
+const ENTRY_IDS = {
+  name: 'entry.987422694',
+  email: 'entry.1830271246',
+  country: 'entry.1105993045',
+  product: 'entry.1300895558',
+  message: 'entry.1818048367',
+};
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -15,6 +28,8 @@ export default function Contact() {
     product: '',
     message: '',
   });
+  const [submitted, setSubmitted] = useState(false);
+  const iframeRef = useRef(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,18 +38,49 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const subject = encodeURIComponent(
-      `Website Enquiry: ${form.product || 'General'} — ${form.name}`,
-    );
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\nCountry: ${form.country}\nProduct of Interest: ${form.product || 'Not specified'}\n\nMessage:\n${form.message}`,
-    );
-    window.location.href = `mailto:${company.contact.email}?subject=${subject}&body=${body}`;
+
+    // Build a hidden native form and submit it to Google Forms inside the
+    // hidden iframe. Fire-and-forget: there is no response to wait on.
+    const iframeDoc = iframeRef.current?.contentDocument;
+    if (iframeDoc) {
+      const formEl = iframeDoc.createElement('form');
+      formEl.method = 'POST';
+      formEl.action = GOOGLE_FORM_URL;
+
+      Object.keys(ENTRY_IDS).forEach((key) => {
+        const input = iframeDoc.createElement('input');
+        input.type = 'hidden';
+        input.name = ENTRY_IDS[key];
+        input.value = form[key];
+        formEl.appendChild(input);
+      });
+
+      iframeDoc.body.appendChild(formEl);
+      formEl.submit();
+    }
+
+    setSubmitted(true);
+    setForm({
+      name: '',
+      email: '',
+      country: '',
+      product: '',
+      message: '',
+    });
+    window.setTimeout(() => setSubmitted(false), 6000);
   };
 
   return (
     <>
       <Seo path="/contact" />
+      {/* Hidden iframe — submission target; lives outside any dialog so it
+          always survives for the form POST */}
+      <iframe
+        ref={iframeRef}
+        name="hidden-google-form"
+        title="Hidden form submission target"
+        style={{ display: 'none', width: 0, height: 0, border: 0 }}
+      />
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="relative bg-navy-800 text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-navy-800 via-navy-700 to-navy-900 opacity-90" />
@@ -122,6 +168,14 @@ export default function Contact() {
                 Send Us a Message
               </h2>
               <form onSubmit={handleSubmit} className="space-y-5">
+                {submitted && (
+                  <div
+                    role="status"
+                    className="bg-green-50 border border-green-200 text-green-800 rounded-md px-4 py-3 text-sm font-medium"
+                  >
+                    Inquiry submitted successfully — we&apos;ll be in touch soon.
+                  </div>
+                )}
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                     Name *
