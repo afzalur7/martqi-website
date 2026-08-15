@@ -9,6 +9,7 @@ import CategoryPage from './pages/CategoryPage';
 import ProductDetail from './pages/ProductDetail';
 import Certifications from './pages/Certifications';
 import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
 
 // Data
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/export/:slug" element={<ExportItem />} />
         <Route path="/certifications" element={<Certifications />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Layout>

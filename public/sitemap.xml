@@ -51,6 +51,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://martqi.com/blog/what-makes-rice-premium</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://martqi.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

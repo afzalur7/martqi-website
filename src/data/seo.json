@@ -42,5 +42,9 @@
   "/blog": {
     "title": "Blog & News — MARTQI LLP",
     "description": "Updates and insights from MartQi LLP, an Indian export company."
+  },
+  "/blog/what-makes-rice-premium": {
+    "title": "What Makes Rice Premium — And Where Basmati Fits in the World — MARTQI LLP",
+    "description": "From Japan's $109/kg Kinmemai to India's 1121 Basmati — what actually makes rice \"premium,\" and why Indian basmati leads global trade."
   }
 }
