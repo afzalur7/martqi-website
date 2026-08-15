@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="bg-navy-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {/* Brand */}
           <div>
@@ -19,7 +19,7 @@ export default function Footer() {
               <span className="w-1.5 h-1.5 rounded-full bg-sand-400" />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
-              {company.legalName} — an Indian export and services company.
+              {company.legalName} — an Indian export company.
             </p>
           </div>
 
@@ -31,27 +31,6 @@ export default function Footer() {
             <ul className="space-y-2">
               {navigation
                 .find((n) => n.label === 'Export')
-                ?.children?.map((child) => (
-                  <li key={child.path}>
-                    <Link
-                      to={child.path}
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
-                    >
-                      {child.label}
-                    </Link>
-                  </li>
-                ))}
-            </ul>
-          </div>
-
-          {/* Services links */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">
-              Services
-            </h3>
-            <ul className="space-y-2">
-              {navigation
-                .find((n) => n.label === 'Services')
                 ?.children?.map((child) => (
                   <li key={child.path}>
                     <Link

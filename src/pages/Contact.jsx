@@ -12,7 +12,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           title="Contact Us"
-          subtitle="[Approved copy to be inserted — placeholder: get in touch with MartQi LLP for export enquiries, service requests, or general questions.]"
+          subtitle="[Approved copy to be inserted — placeholder: get in touch with MartQi LLP for export enquiries or general questions.]"
         />
 
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -59,7 +59,6 @@ export default function Contact() {
                 >
                   <option value="">Select a topic</option>
                   <option value="export">Export Enquiry</option>
-                  <option value="services">Services Enquiry</option>
                   <option value="other">Other</option>
                 </select>
               </div>

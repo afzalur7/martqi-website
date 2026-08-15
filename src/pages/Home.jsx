@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom';
 import SectionHeader from '../components/SectionHeader';
 import ProductCard from '../components/ProductCard';
-import ServiceCard from '../components/ServiceCard';
 import products from '../data/products';
-import services from '../data/services';
 import company from '../data/company';
 
 export default function Home() {
@@ -18,8 +16,8 @@ export default function Home() {
               From Indian Farms to Global Markets
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-gray-300 leading-relaxed">
-              MartQi LLP exports premium Basmati and Non-Basmati Rice, Fox Nut, and
-              Flax Seed, and delivers Education and Software services in-house.
+              MartQi LLP exports premium Basmati and Non-Basmati Rice, Fox Nut,
+              and Flax Seed from India to markets around the world.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
@@ -29,61 +27,12 @@ export default function Home() {
                 Explore Export Products
               </Link>
               <Link
-                to="/services"
+                to="/about"
                 className="inline-flex items-center px-6 py-3 border border-sand-300 text-sand-200 font-semibold rounded-md hover:bg-white/10 transition-colors"
               >
-                View Our Services
+                About MartQi
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Business Line Split ──────────────────────────── */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Export card */}
-            <Link
-              to="/export"
-              className="group block bg-sand-50 border border-sand-200 rounded-xl p-8 lg:p-10 hover:shadow-lg transition-shadow"
-            >
-              <span className="text-4xl" aria-hidden="true">🚢</span>
-              <h2 className="mt-4 text-2xl font-bold text-navy-800">
-                Export
-              </h2>
-              <p className="mt-3 text-gray-600 leading-relaxed">
-                We source and export premium agricultural commodities from India
-                to global markets — rice, fox nuts, flax seeds, and more.
-              </p>
-              <span className="mt-5 inline-flex items-center text-sm font-semibold text-navy-600 group-hover:text-navy-800 transition-colors">
-                Browse Products
-                <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </span>
-            </Link>
-
-            {/* Services card */}
-            <Link
-              to="/services"
-              className="group block bg-light-blue-50 border border-light-blue-200 rounded-xl p-8 lg:p-10 hover:shadow-lg transition-shadow"
-            >
-              <span className="text-4xl" aria-hidden="true">⚙️</span>
-              <h2 className="mt-4 text-2xl font-bold text-navy-800">
-                Services
-              </h2>
-              <p className="mt-3 text-gray-600 leading-relaxed">
-                In-house services in Education consulting and Software
-                development — helping clients build and grow.
-              </p>
-              <span className="mt-5 inline-flex items-center text-sm font-semibold text-navy-600 group-hover:text-navy-800 transition-colors">
-                Explore Services
-                <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </span>
-            </Link>
           </div>
         </div>
       </section>
@@ -100,20 +49,13 @@ export default function Home() {
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── Services Showcase ────────────────────────────── */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            title="In-House Services"
-            subtitle="Domestic services division — independent of our export trade."
-          />
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service) => (
-              <ServiceCard key={service.id} service={service} />
-            ))}
+          <div className="mt-10 text-center">
+            <Link
+              to="/export"
+              className="inline-flex items-center px-6 py-3 bg-navy-700 text-white font-semibold rounded-md hover:bg-navy-800 transition-colors"
+            >
+              View the Full Catalog
+            </Link>
           </div>
         </div>
       </section>
@@ -162,8 +104,8 @@ export default function Home() {
             Ready to Work Together?
           </h2>
           <p className="mt-4 text-lg text-gray-600 max-w-xl mx-auto">
-            Whether you&apos;re an importer looking for quality Indian goods or a
-            business seeking services, we&apos;re here to help.
+            Whether you&apos;re an importer looking for quality Indian goods or
+            have a question about our export catalog, we&apos;re here to help.
           </p>
           <Link
             to="/contact"

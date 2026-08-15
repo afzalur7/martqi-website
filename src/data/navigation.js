@@ -14,14 +14,6 @@ const navigation = [
       { label: 'Flax Seed', path: '/export/flax-seed' },
     ],
   },
-  {
-    label: 'Services',
-    path: '/services',
-    children: [
-      { label: 'Education', path: '/services/education' },
-      { label: 'Software', path: '/services/software' },
-    ],
-  },
   { label: 'Certifications', path: '/certifications' },
   { label: 'Blog', path: '/blog' },
   { label: 'Contact', path: '/contact' },
