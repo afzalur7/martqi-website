@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import company from '../data/company';
 import navigation from '../data/navigation';
 import imageCredits from '../data/imageCredits';
+import logo1x from '../assets/logo/martqi-logo-1x.png';
+import logo2x from '../assets/logo/martqi-logo.png';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,11 +15,21 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <Link to="/" className="inline-flex items-center gap-2 mb-4">
-              <span className="text-xl font-bold text-white tracking-tight">
-                MartQi
-              </span>
-              <span className="w-1.5 h-1.5 rounded-full bg-sand-400" />
+            {/* White chip keeps the black-on-blue wordmark legible on the
+                navy footer without recoloring the logo file */}
+            <Link
+              to="/"
+              className="inline-block bg-white rounded-lg px-3 py-2 mb-4"
+              aria-label="MartQi — Home"
+            >
+              <img
+                src={logo1x}
+                srcSet={`${logo2x} 2x`}
+                width={118}
+                height={36}
+                alt="MartQi"
+                className="h-8 w-auto"
+              />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
               {company.legalName} — an Indian export company.

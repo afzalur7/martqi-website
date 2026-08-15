@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import navigation from '../data/navigation';
+import logo1x from '../assets/logo/martqi-logo-1x.png';
+import logo2x from '../assets/logo/martqi-logo.png';
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -10,11 +12,15 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 shrink-0">
-            <span className="text-2xl font-bold text-navy-800 tracking-tight">
-              MartQi
-            </span>
-            <span className="w-2 h-2 rounded-full bg-navy-600" />
+          <Link to="/" className="shrink-0" aria-label="MartQi — Home">
+            <img
+              src={logo1x}
+              srcSet={`${logo2x} 2x`}
+              width={118}
+              height={36}
+              alt="MartQi"
+              className="h-8 lg:h-9 w-auto"
+            />
           </Link>
 
           {/* Desktop nav */}
