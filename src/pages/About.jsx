@@ -100,7 +100,7 @@ export default function About() {
             <li aria-hidden="true" className="text-sand-400">·</li>
             <li className="font-medium">Legal structure: LLP</li>
             <li aria-hidden="true" className="text-sand-400">·</li>
-            <li className="font-medium">APEDA registration in progress</li>
+            <li className="font-medium">APEDA RCMC registered</li>
           </ul>
         </div>
       </section>

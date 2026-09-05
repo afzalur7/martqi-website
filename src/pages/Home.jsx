@@ -89,10 +89,10 @@ export default function Home() {
             </div>
             <div className="p-6 rounded-lg bg-navy-700/50">
               <p className="text-sm font-medium text-sand-400 uppercase tracking-wider">
-                APEDA Registration
+                APEDA RCMC
               </p>
               <p className="mt-2 text-xl font-bold text-white">
-                In Progress
+                Registered
               </p>
             </div>
           </div>
