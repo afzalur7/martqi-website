@@ -33,8 +33,6 @@ const company = {
   icegate: {
     id: 'ABZFM2033KPIE000',
   },
-  yearEstablished: '[YEAR ESTABLISHED]',
-  clientCount: '[CLIENT COUNT]',
   contact: {
     principalPlaceOfBusiness:
       'Floor No. 1, Flat No. 10-900011, Adarsh Nagar, Pothireddy Palli X Road, Lane Beside TVS Showroom, Chow Rasta, Sangareddy, Telangana 502295, India',
