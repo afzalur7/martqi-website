@@ -89,9 +89,29 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-navy-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-500">
-            &copy; {currentYear} {company.legalName}. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+            <p className="text-sm text-gray-500">
+              &copy; {currentYear} {company.legalName}. All rights reserved.
+            </p>
+            <p className="text-xs text-gray-600" aria-hidden="true">
+              <span className="hidden sm:inline">|</span>
+            </p>
+            <p className="text-xs">
+              <Link
+                to="/privacy-policy"
+                className="text-gray-500 hover:text-white transition-colors underline"
+              >
+                Privacy Policy
+              </Link>
+              <span className="mx-2 text-gray-600">|</span>
+              <Link
+                to="/terms-of-use"
+                className="text-gray-500 hover:text-white transition-colors underline"
+              >
+                Terms of Use
+              </Link>
+            </p>
+          </div>
           <p className="text-xs text-gray-600">
             IEC: {company.iec.code} | GST: Delhi &amp; Telangana
           </p>

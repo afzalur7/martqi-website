@@ -46,5 +46,13 @@
   "/blog/what-makes-rice-premium": {
     "title": "What Makes Rice Premium — And Where Basmati Fits in the World — MARTQI LLP",
     "description": "From Japan's $109/kg Kinmemai to India's 1121 Basmati — what actually makes rice \"premium,\" and why Indian basmati leads global trade."
+  },
+  "/privacy-policy": {
+    "title": "Privacy Policy | MartQi LLP",
+    "description": "How MartQi LLP collects, uses, and protects information submitted through martqi.com, including contact inquiries handled via Google Forms."
+  },
+  "/terms-of-use": {
+    "title": "Terms of Use | MartQi LLP",
+    "description": "Terms governing use of the martqi.com website, including product information disclaimer, document verification, and intellectual property."
   }
 }
