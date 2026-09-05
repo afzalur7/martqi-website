@@ -73,6 +73,38 @@ export default function ProductDetail() {
                       loading="lazy"
                     />
                   )}
+                  {fact.types && fact.types.length > 0 && (
+                    <div className="mt-6">
+                      {fact.typesHeading && (
+                        <h3 className="text-lg font-semibold text-navy-700 mb-4">
+                          {fact.typesHeading}
+                        </h3>
+                      )}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                        {fact.types.map((type) => (
+                          <div
+                            key={type.name}
+                            className="border border-gray-200 rounded-lg overflow-hidden bg-sand-50"
+                          >
+                            <img
+                              src={type.image}
+                              alt={type.imageAlt}
+                              className="w-full h-44 object-cover"
+                              loading="lazy"
+                            />
+                            <div className="p-4">
+                              <h4 className="font-semibold text-navy-700">
+                                {type.name}
+                              </h4>
+                              <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+                                {type.text}
+                              </p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </dd>
               </div>
             ))}

@@ -3,10 +3,13 @@
 // Copy approved in section 3.3 of the project doc — do not reword.
 
 import basmatiRiceImg from '../assets/products/basmati-rice.webp';
-import basmati1121Img from '../assets/products/basmati-1121.webp';
-import mattaRiceImg from '../assets/products/matta-rice.webp';
-import foxNutImg from '../assets/products/fox-nut.webp';
-import flaxSeedImg from '../assets/products/flax-seed.webp';
+import basmati1509Img from '../assets/products/1509.webp';
+import basmati1121SellaImg from '../assets/products/1121-sella.webp';
+import basmati1121SteamedImg from '../assets/products/1121-steamed.webp';
+import basmati1121OrganicImg from '../assets/products/1121-organic.webp';
+import mattaRiceImg from '../assets/products/matta-rice-real.webp';
+import foxNutImg from '../assets/products/fox-nut-real.webp';
+import flaxSeedImg from '../assets/products/flax-seed-real.webp';
 
 const products = [
   // ── Basmati Rice ──────────────────────────────────────────────
@@ -26,12 +29,33 @@ const products = [
       {
         label: '1121 Basmati',
         text: 'Extra-long slender grain, among the longest-grain rice varieties traded globally; distinct aroma; elongates significantly on cooking; commonly used for premium biryani and pulao; strong demand in Middle East and international premium rice markets.',
-        image: basmati1121Img,
-        imageAlt: '1121 Sella Basmati rice',
+        typesHeading: '1121 Basmati — Available Types',
+        types: [
+          {
+            name: 'Sella (Parboiled)',
+            image: basmati1121SellaImg,
+            imageAlt: '1121 Sella (parboiled) Basmati rice',
+            text: `'Sella' is the trade name for parboiled basmati. The paddy is soaked, steamed, and dried before milling — this drives nutrients from the bran into the grain and makes it firmer and less prone to breaking, giving cooked rice a firmer, non-sticky texture. 'Boiled rice' is the same process under a different common trade name.`,
+          },
+          {
+            name: 'Steamed',
+            image: basmati1121SteamedImg,
+            imageAlt: '1121 Steamed Basmati rice',
+            text: 'A lighter steam treatment than full Sella/parboiling — firms up the grain slightly for better milling and cooking integrity while staying closer to raw basmati\'s natural white color and delicate texture.',
+          },
+          {
+            name: 'Organic',
+            image: basmati1121OrganicImg,
+            imageAlt: '1121 Organic Basmati rice',
+            text: 'Grown without synthetic pesticides or chemical fertilizers, certified organic. This describes how the paddy was farmed, not how it was processed afterward — an organic-grown 1121 can still be sold raw, Sella, or steamed.',
+          },
+        ],
       },
       {
         label: '1509 Basmati',
         text: 'An early-maturing basmati variety, long slender aromatic grain (slightly shorter than 1121 but still extra-long grain basmati); valued as a quality, cost-effective option; widely traded to Middle East and European markets.',
+        image: basmati1509Img,
+        imageAlt: '1509 Basmati rice',
       },
     ],
     ctaLabel: 'Request a Quote — Basmati Rice.',
@@ -49,7 +73,7 @@ const products = [
     subhead:
       'MartQi exports Matta Rice (also known as Palakkadan or Kerala Matta Rice), a coarse, parboiled red rice traditionally grown in Kerala and Karnataka, India.',
     image: mattaRiceImg,
-    imageAlt: 'Kerala Matta rice',
+    imageAlt: 'Matta (Palakkadan red) rice',
     marketTags: ['New Zealand'],
     order: 2,
     profileFacts: [
@@ -89,7 +113,7 @@ const products = [
     subhead:
       'MartQi exports Makhana (Fox Nut), the puffed seed of the prickly water lily (Euryale ferox), traditionally cultivated in the Mithila region of Bihar, India.',
     image: foxNutImg,
-    imageAlt: 'Phool Makhana (fox nut) puffs',
+    imageAlt: 'Fox Nut (Makhana) puffs',
     marketTags: [],
     order: 3,
     profileFacts: [
@@ -129,7 +153,7 @@ const products = [
     subhead:
       'MartQi exports Flax Seed (Linum usitatissimum), an oilseed crop grown across India.',
     image: flaxSeedImg,
-    imageAlt: 'Brown flax seeds',
+    imageAlt: 'Flax seeds',
     marketTags: [],
     order: 4,
     profileFacts: [
