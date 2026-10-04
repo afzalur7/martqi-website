@@ -1,6 +1,8 @@
 // Company facts — single source of truth for legal / compliance data.
 // Update here to reflect on every page that references this info.
 
+import kamalAgarwalPhoto from '../assets/kamal-agarwal.webp';
+
 const company = {
   legalName: 'MARTQI LLP',
   shortName: 'MartQi',
@@ -37,8 +39,13 @@ const company = {
     principalPlaceOfBusiness:
       'Floor No. 1, Flat No. 10-900011, Adarsh Nagar, Pothireddy Palli X Road, Lane Beside TVS Showroom, Chow Rasta, Sangareddy, Telangana 502295, India',
     email: 'info@martqi.com',
-    mobile: '+91 97175 50353',
     llpin: 'ACE-4894',
+    contactPerson: {
+      name: 'Mr. Kamal Agarwal',
+      photo: kamalAgarwalPhoto,
+      photoAlt: 'Mr. Kamal Agarwal',
+      mobiles: ['+91 98375 19670', '+91 97175 50353'],
+    },
   },
 };
 
